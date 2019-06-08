@@ -72,6 +72,31 @@ a {
     color: inherit;
 }
 
+/* Animations */
+
+@keyframes slideInTop {
+    from {
+        transform: translateY(-4rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes growInRight {
+    from {
+        transform: translateX(8rem) scale(.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
 /* Container element */
 
 .container {
@@ -87,6 +112,7 @@ a {
     justify-content: space-between;
     align-items: baseline;
     margin: 2rem 0 3rem 0;
+    animation: slideInTop .8s;
 }
 
 .nav a {
@@ -116,7 +142,8 @@ a {
 .top-content .text-container {
     width: 48%;
     padding: 0 1%;
-    padding-bottom: 20px;  
+    padding-bottom: 20px;
+    animation: growInRight .6s;
 }
 
 .top-content p {
@@ -207,6 +234,10 @@ a {
     padding-right: 0;
 }
 
+.bottom-content .text-container p {
+    font-size: 1.6rem;
+}
+
 /* Footer */
 
 footer {
@@ -238,6 +269,7 @@ footer nav a {
     padding: 0 1rem 2rem 1rem;
     border-bottom: 1px dashed black;
     margin-bottom: 3rem;
+    animation: growInRight .6s;
 }
 
 
@@ -287,4 +319,27 @@ footer nav a {
 
 .bottom-content-about p {
     font-size: 1.6rem;
+}
+
+/* ///////////// */
+/* Media queries */
+/* ///////////// */
+
+@media screen and (max-width: 767px) {
+    .container,
+    .header .banner {
+        width: 92vw;
+    }
+
+    .middle-content .boxes .box {
+        width: 40vw;
+    }
+
+    .middle-content-about .about-card {
+        width: 100%;
+    }
+
+    .middle-content-about .about-card img {
+        object-fit: cover;
+    }
 }
