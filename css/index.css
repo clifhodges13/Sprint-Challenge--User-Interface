@@ -225,3 +225,43 @@ footer nav a {
 .top-content-about p {
     font-size: 1.6rem;
 }
+
+.middle-content-about {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+}
+
+.middle-content-about .about-card {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 45rem;
+    width: 45%;
+    margin: 2rem;
+    justify-content: space-between;
+    border-bottom: 1px dashed black;
+    padding-bottom: 3rem;
+}
+
+.middle-content-about .about-card p {
+    font-size: 1.6rem;
+}
+
+.middle-content-about .about-card a {
+    font-size: 1.6rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    width: 12rem;
+    padding: .75rem 1rem;
+    text-align: center;
+}
+
+.bottom-content-about {
+    padding: 0 2.5rem 2rem 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.bottom-content-about p {
+    font-size: 1.6rem;
+}
