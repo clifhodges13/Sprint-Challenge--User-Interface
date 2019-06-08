@@ -54,6 +54,7 @@ table {
 html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
 }
 
 h1, h2, h3, h4, h5 {
@@ -66,9 +67,34 @@ p {
     line-height: 1.4;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .container {
     width: 800px;
     margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 2rem 0 3rem 0;
+}
+
+.nav a {
+    font-size: 1.3rem;
+}
+
+.nav a:last-child {
+    margin-right: 1.5rem;
+}
+
+.header {
+    margin-bottom: 3rem;
 }
 
 .top-content {
@@ -83,6 +109,10 @@ p {
     width: 48%;
     padding: 0 1%;
     padding-bottom: 20px;  
+}
+
+.top-content p {
+    font-size: 1.6rem;
 }
 
 .middle-content {
@@ -104,12 +134,51 @@ p {
 .middle-content .boxes .box {
     width: 12.5%;
     height: 100px;
-    background: black;
     margin: 20px 2.5%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.box1 {
+    background: teal;
+}
+
+.box2 {
+    background: gold;
+}
+
+.box3 {
+    background: cadetblue;
+}
+
+.box4 {
+    background: coral;
+}
+
+.box5 {
+    background: crimson;
+}
+
+.box6 {
+    background: forestgreen;
+}
+
+.box7 {
+    background: darkorchid;
+}
+
+.box8 {
+    background: hotpink;
+}
+
+.box9 {
+    background: indigo;
+}
+
+.box10 {
+    background: dodgerblue;
 }
 
 .bottom-content {
