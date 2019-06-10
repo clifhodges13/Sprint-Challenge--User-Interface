@@ -54,6 +54,7 @@ table {
 html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
 }
 
 h1, h2, h3, h4, h5 {
@@ -66,10 +67,69 @@ p {
     line-height: 1.4;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Animations */
+
+@keyframes slideInTop {
+    from {
+        transform: translateY(-4rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes growInRight {
+    from {
+        transform: translateX(8rem) scale(.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Container element */
+
 .container {
     width: 800px;
     margin: 0 auto;
 }
+
+/* Navigation */
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 2rem 0 3rem 0;
+    animation: slideInTop .8s;
+}
+
+.nav a {
+    font-size: 1.3rem;
+}
+
+.nav a:last-child {
+    margin-right: 1.5rem;
+}
+
+/* Header */
+
+.header {
+    margin-bottom: 3rem;
+}
+
+/* Top content */
 
 .top-content {
     display: flex;
@@ -82,8 +142,15 @@ p {
 .top-content .text-container {
     width: 48%;
     padding: 0 1%;
-    padding-bottom: 20px;  
+    padding-bottom: 20px;
+    animation: growInRight .6s;
 }
+
+.top-content p {
+    font-size: 1.6rem;
+}
+
+/* Middle content */
 
 .middle-content {
     margin-bottom: 20px;
@@ -104,13 +171,54 @@ p {
 .middle-content .boxes .box {
     width: 12.5%;
     height: 100px;
-    background: black;
     margin: 20px 2.5%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.box1 {
+    background: teal;
+}
+
+.box2 {
+    background: gold;
+}
+
+.box3 {
+    background: cadetblue;
+}
+
+.box4 {
+    background: coral;
+}
+
+.box5 {
+    background: crimson;
+}
+
+.box6 {
+    background: forestgreen;
+}
+
+.box7 {
+    background: darkorchid;
+}
+
+.box8 {
+    background: hotpink;
+}
+
+.box9 {
+    background: indigo;
+}
+
+.box10 {
+    background: dodgerblue;
+}
+
+/* Bottom content */
 
 .bottom-content {
     display: flex;
@@ -125,6 +233,12 @@ p {
 .bottom-content .text-container:last-child {
     padding-right: 0;
 }
+
+.bottom-content .text-container p {
+    font-size: 1.6rem;
+}
+
+/* Footer */
 
 footer {
     width: 100%;
@@ -143,4 +257,89 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+/* ////////// */
+/* About Page */
+/* ////////// */
+
+/* Top content */
+
+.top-content-about {
+    padding: 0 1rem 2rem 1rem;
+    border-bottom: 1px dashed black;
+    margin-bottom: 3rem;
+    animation: growInRight .6s;
+}
+
+
+.top-content-about p {
+    font-size: 1.6rem;
+}
+
+/* Middle content */
+
+.middle-content-about {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+}
+
+.middle-content-about .about-card {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 45rem;
+    width: 45%;
+    margin: 2rem;
+    justify-content: space-between;
+    border-bottom: 1px dashed black;
+    padding-bottom: 3rem;
+}
+
+.middle-content-about .about-card p {
+    font-size: 1.6rem;
+}
+
+.middle-content-about .about-card a {
+    font-size: 1.6rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    width: 12rem;
+    padding: .75rem 1rem;
+    text-align: center;
+}
+
+/* Bottom content */
+
+.bottom-content-about {
+    padding: 0 2.5rem 2rem 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.bottom-content-about p {
+    font-size: 1.6rem;
+}
+
+/* ///////////// */
+/* Media queries */
+/* ///////////// */
+
+@media screen and (max-width: 767px) {
+    .container,
+    .header .banner {
+        width: 92vw;
+    }
+
+    .middle-content .boxes .box {
+        width: 40vw;
+    }
+
+    .middle-content-about .about-card {
+        width: 100%;
+    }
+
+    .middle-content-about .about-card img {
+        object-fit: cover;
+    }
 }
